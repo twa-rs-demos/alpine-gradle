@@ -5,7 +5,7 @@ MAINTAINER afar.chen@foxmail.com
 RUN mkdir -p /gradle && mkdir -p /app
 VOLUME /gradle /app
 
-COPY build.gradle /app
+# copy dependencies into image for speeding up `gradle test`
 COPY gradle /gradle
 
 
